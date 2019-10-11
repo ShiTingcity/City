@@ -1,0 +1,22 @@
+nine=data.frame()
+for (i in 1:9){
+	for (j in 1:9){
+	a=as.character(i)
+	b=as.character(j)
+	nine[i,j]= paste(a,"x",b,"=",as.character(i*j))
+}
+}
+colnames(nine)<-c(1:9)
+nine
+
+VAR<-function(x){
+	x<-scan()
+	result=0
+	sum=0
+	M=mean(x)
+	for (i in 1:length(x)){
+		sum=sum+(x[i]-M)**2
+	}
+	result=sum/(length(x)-1)
+return(result)
+}
